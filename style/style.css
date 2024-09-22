@@ -714,11 +714,11 @@ li {
   .nav-bar ul {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 60px;
   }
 
   nav {
-    padding: 40px 120px 30px 120px;
+    padding: 40px 120px 40px 120px;
   }
 
   .menu {
@@ -748,14 +748,23 @@ li {
 
   #video-header span {
     top: 135px;
-    padding: 16px 80px 8px 80px;
-    font-size: 24px;
+    padding: 16px 100px 8px 100px;
+    font-size: 28px;
+    /* width: 800px; */
+  }
+
+  #video-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   #techpaathshala {
     width: 200px;
-    height: 24px;
-    margin: 0 auto;
+    height: 28px;
+    margin: none;
+    position: relative;
+    top: 5px;
   }
 
   #techpaathshala_link {
@@ -834,8 +843,8 @@ li {
 
   .description-heading {
     font-size: 40px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
 
   .courses p {
@@ -844,7 +853,7 @@ li {
   }
 
   .courses {
-    gap: 200px;
+    gap: 150px;
   }
 
   #expertise h2,
@@ -882,7 +891,7 @@ li {
   .technologies {
     overflow: scroll;
     display: flex;
-    gap: 140px;
+    gap: 50px;
   }
 
   .technologies p {
@@ -891,9 +900,8 @@ li {
 
   .soft-skill {
     flex-direction: row;
-    justify-content: space-between;
     gap: 20px;
-    padding: 0px 30px;
+    padding: 10px 40px;
   }
 
   .skills p {
