@@ -1,0 +1,995 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Navbar Styling Starts */
+.nav-bar {
+  display: none;
+  list-style: none;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+nav {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  gap: 24px;
+  background-color: #1d1d1d;
+  color: white;
+  position: relative;
+  z-index: 2;
+  width: auto;
+}
+
+.search-box {
+  background-color: rgba(245, 245, 245, 0.2);
+  width: 280px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 0px 8px 16px;
+  color: white;
+}
+
+#search {
+  width: 200px;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: white;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#search::placeholder {
+  color: white;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar Ends */
+
+.image-banner {
+  background-color: black;
+}
+
+#image-profile {
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  margin: 0 auto;
+}
+
+#video-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#video-header span {
+  background-color: #fff0bb;
+  padding: 8px;
+  border-radius: 0px 0px 16px 16px;
+  color: #1d1d1d;
+  position: absolute;
+  top: 70px;
+  border: 2px solid #f3bd00;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Lato";
+  gap: 10px;
+}
+
+#techpaathshala {
+  width: 130px;
+  height: 16px;
+  margin: 0 auto;
+}
+
+#techpaathshala_link {
+  font-size: 12px;
+  font-family: Lato;
+  font-weight: 400;
+  color: rgba(9, 72, 180, 1);
+}
+
+/* Video Styling Ends */
+
+/* Profile Styling Starts */
+
+.image-container {
+  width: 100vw;
+  height: 300px;
+}
+
+#profile-img {
+  position: relative;
+  height: fit-content;
+  width: 90vw;
+  bottom: 95px;
+  left: 17px;
+}
+
+.intro {
+  text-align: center;
+  font-family: "Poppins";
+  padding: 20px 16px;
+}
+
+#profile-name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+#name {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 24px;
+}
+
+#profile-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(85, 85, 85, 1);
+  padding-bottom: 30px;
+}
+
+.profile-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 24px 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Poppins";
+  line-height: 18px;
+}
+
+button a{
+  text-decoration: none;
+  color: white ;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#download-resume,
+.view-project,
+.know-more,
+#contact-btn {
+  background-color: rgba(9, 72, 180, 1);
+  color: white;
+}
+
+
+#see-my-work {
+  background-color: white;
+  border: 2px solid rgba(9, 72, 180, 1);
+}
+#see-my-work a{
+  color: black;
+}
+
+/* Description CSS */
+
+.description {
+  text-align: center;
+  padding: 24px 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 8px;
+}
+
+.description-heading {
+  text-align: center;
+  border-bottom: 3px solid #1d1d1d;
+  padding: 10px 30px 10px 30px;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
+.courses {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Poppins";
+  padding: 20px 10px 0px 10px;
+}
+
+#expertise,
+.tech-skills,
+.soft-skills,
+.projects,
+.experineces,
+.education {
+  margin: 0 auto;
+}
+
+#expertise h2,
+.tech-skills h2,
+.soft-skills h2,
+.projects h2,
+.experineces h2,
+.education h2 {
+  padding: 10px 0px 10px 0px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Poppins";
+}
+
+/* Expertise CSS */
+
+.course-img {
+  width: 288px;
+  height: 258px;
+  border-radius: 4px;
+}
+
+.expertise {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+}
+
+.expertise-heading {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Poppins";
+  text-align: center;
+  line-height: 36px;
+}
+
+.expertise-content {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Poppins";
+  text-align: center;
+  padding-bottom: 20px;
+  line-height: 24px;
+  color: rgba(85, 85, 85, 1);
+}
+
+.expertise-content {
+  color: #555555;
+}
+
+.technologies {
+  display: flex;
+  overflow: scroll;
+  gap: 50px;
+  scrollbar-width: none;
+  padding: 0px 20px 0px 20px;
+}
+
+.technologies p {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Lato";
+}
+
+/* Softskills CSS */
+
+.soft-skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* padding: 0px 16px 0px 16px; */
+}
+
+.soft-skill p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Poppins";
+}
+
+.skills {
+  padding: 20px 0px 20px 0px;
+  text-align: center;
+}
+
+/* Project CSS */
+
+.project {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 16px;
+  width: 95vw;
+}
+
+.project-heading {
+  padding: 10px 0px 10px 0px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Poppins";
+  line-height: 36px;
+}
+
+.project-description {
+  color: #555555;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Poppins";
+  line-height: 24px;
+  padding-bottom: 20px;
+}
+
+.project-scroll {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+#project {
+  display: flex;
+  overflow: scroll;
+  scrollbar-width: none;
+  padding: 0px 16px;
+}
+
+#back,
+#front {
+  border-radius: 50%;
+  border: none;
+  height: 70px;
+  width: 70px;
+  font-size: 2em;
+  background-color: #f1f1f1;
+  color: #1d1d1d;
+}
+
+/* Experience CSS */
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+.experience {
+  display: flex;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 24px;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.experience-img {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.office-name {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Poppins";
+}
+
+.duration,
+.work-content {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Poppins";
+}
+
+.work-content {
+  color: #555555;
+  text-align: center;
+}
+
+/* Qualification CSS */
+li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  gap: 3px;
+}
+
+#qualification {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icons {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+}
+.lines {
+  height: 83px;
+  background-color: black;
+  width: 2px;
+}
+
+#icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  margin-right: 30px;
+  padding-left: 20px;
+}
+
+#icon-one {
+  margin-top: 5px;
+}
+
+.qualification-course {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
+.qualification-college {
+  color: #555555;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Poppins";
+}
+
+#education-img {
+  width: 300px;
+  height: 406px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.education-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: fit-content; */
+}
+
+.qualification {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.education-img p {
+  color: #555555;
+  padding: 30px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.footer-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  bottom: -60px;
+}
+
+#footer-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 3px solid black;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: black;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+#copyright {
+  text-align: center;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 12px;
+}
+
+#copyright p {
+  padding: 24px;
+}
+
+#phone,
+#email {
+  display: flex;
+  gap: 5px;
+}
+
+#phone p,
+#email p {
+  margin: 0 auto;
+}
+
+#email p {
+  font-size: 14px;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+
+#phone p {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Poppins";
+}
+
+.footer-content h2 {
+  font-size: 24px;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+
+#contact-btn {
+  margin-bottom: 30px;
+  padding: 10px, 24px, 10px, 24px;
+  margin: 0 auto;
+}
+
+/* Mobile Design Ends */
+
+@media screen and (min-width: 340px) {
+  #email p,
+  #phone p {
+    font-size: 16px;
+  }
+
+  .image-container {
+    height: 390px;
+  }
+  #profile-img {
+    left: 28px;
+  }
+
+  .courses {
+    gap: 30px;
+  }
+
+  .courses p {
+    font-size: 16px;
+  }
+
+  #video-header span {
+    background-color: #fff0bb;
+    padding: 8px 30px;
+  }
+}
+
+@media screen and (min-width: 397px) {
+  .image-container {
+    height: 420px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .image-container {
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  .image-container {
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  #image-profile {
+    width: 70vw;
+    height: 350px;
+  }
+  .image-container {
+    height: 675px;
+  }
+
+  #profile-img {
+    left: 35px;
+    bottom: 165px;
+  }
+  .course-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+  }
+
+  .expertise {
+    flex-direction: row;
+    justify-content: initial;
+    align-items: initial;
+  }
+  .expertise-heading,
+  .expertise-content {
+    text-align: initial;
+  }
+
+  .soft-skill {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .experience {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #profile-img {
+    height: 800px;
+    left: 50px;
+  }
+
+  .image-container {
+    height: 600px;
+  }
+  #education-img {
+    width: initial;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-bar {
+    display: flex;
+    font-size: 24px;
+    font-family: Poppins;
+    justify-content: center;
+  }
+  .nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  nav {
+    padding: 40px 120px 40px 120px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .search-box {
+    background-color: #555555;
+    width: 240px;
+    height: 52px;
+    padding: 8px 0px 8px 16px;
+    border-radius: 8px;
+  }
+
+  #search {
+    width: 200px;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 24px;
+  }
+
+  #image-profile {
+    width: 50vw;
+    height: 600px;
+  }
+
+  #video-header span {
+    top: 145px;
+    padding: 16px 97px 8px 97px;
+    font-size: 24px;
+  }
+
+  #techpaathshala {
+    width: 200px;
+    height: 24px;
+    margin: 0 auto;
+  }
+
+  #techpaathshala_link {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+
+  .image-container {
+    float: right;
+    width: 50vw;
+  }
+
+  #profile-img {
+    width: 40vw;
+    bottom: 50px;
+    right: 50px;
+    top: -195px;
+    /* margin-right: 40px; */
+  }
+
+  .intro {
+    width: 50vw;
+    text-align: initial;
+    margin-top: 80px;
+  }
+
+  #profile-name {
+    font-size: 48px;
+    font-weight: 700px;
+    line-height: 72px;
+  }
+
+  #name {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 60px;
+  }
+
+  #profile-description {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    color: rgba(85, 85, 85, 1);
+  }
+  section {
+    width: 90vw;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: row-reverse;
+    margin: 0 auto;
+  }
+
+  .profile-btn {
+    display: flex;
+    gap: 30px;
+    justify-content: initial;
+    align-items: initial;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 24px 10px 24px;
+  }
+
+  .description,
+  .expertise,
+  .technologies,
+  .soft-skill,
+  #project,
+  .experience-container,
+  .qualification {
+    margin: 0 auto;
+    width: 90vw;
+  }
+
+  .description-heading {
+    font-size: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .courses p {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .courses {
+    gap: 200px;
+  }
+
+  #expertise h2,
+  .tech-skills h2,
+  .soft-skills h2,
+  .projects h2,
+  .experineces h2,
+  .education h2 {
+    text-align: inherit;
+    font-size: 48px;
+    width: 90vw;
+    margin: 30px auto;
+  }
+
+  .course-img {
+    width: 265px;
+    height: 258px;
+  }
+
+  .expertise-description {
+    width: 700px;
+  }
+
+  .expertise-heading {
+    text-align: initial;
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .expertise-content {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .technologies {
+    overflow: scroll;
+    display: flex;
+    gap: 140px;
+  }
+
+  .technologies p {
+    font-size: 20px;
+  }
+
+  .soft-skill {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0px 30px;
+  }
+
+  .skills p {
+    font-size: 32px;
+  }
+  
+  #project{
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+  }
+
+
+  .project-heading {
+    font-size: 24px;
+  }
+
+  .project-description {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .experience-container{
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  .work-content, .office-name, .duration{
+    text-align: initial;
+  }
+
+
+  .qualification{
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  .qualification-course {
+    font-size: 26px;
+  }
+
+  .qualification-college {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  #icon-one {
+    margin-top: 20px;
+  }
+
+  .lines {
+    height: 123px;
+  }
+
+  .qualification {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 100px;;
+  }
+
+  .qualification-course {
+    font-size: 40px;
+  }
+
+  #education-img {
+    width: 590px;
+    height: 350px;
+  }
+  .education-img p {
+    font-size: 24px;
+    font-family: "Poppins";
+    font-weight: 400;
+    color: #555555;
+    text-align: initial;
+    padding: 0;
+  }
+
+  .education-img {
+    width: 590px;
+    height: fit-content;
+    justify-content: normal;
+    align-items: normal;
+  }
+
+  .icons {
+    width: 25px;
+    height: 25px;
+  }
+
+  #qualification {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
