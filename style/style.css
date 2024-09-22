@@ -718,7 +718,7 @@ li {
   }
 
   nav {
-    padding: 40px 120px 40px 120px;
+    padding: 40px 120px 30px 120px;
   }
 
   .menu {
@@ -742,13 +742,13 @@ li {
   }
 
   #image-profile {
-    width: 50vw;
+    width: 100vw;
     height: 600px;
   }
 
   #video-header span {
-    top: 145px;
-    padding: 16px 97px 8px 97px;
+    top: 135px;
+    padding: 16px 80px 8px 80px;
     font-size: 24px;
   }
 
@@ -759,7 +759,7 @@ li {
   }
 
   #techpaathshala_link {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 19.2px;
   }
 
