@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,39 +6,27 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
 }
 
 /* Navbar Styling Starts */
-.nav-bar {
-  display: none;
-  list-style: none;
-}
-
-.nav-bar a {
-  text-decoration: none;
-  color: white;
-}
-
-
-
-nav {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  gap: 24px;
-  background-color: #1d1d1d;
-  color: white;
-  position: relative;
+header {
+  background-color: rgba(29, 29, 29, 1);
   z-index: 2;
-  width: auto;
+  position: relative;
 }
 
-.search-box {
+.display {
+  display: flex;
+}
+
+.navigation-menu__searchbar {
   background-color: rgba(245, 245, 245, 0.2);
-  width: 280px;
+  width: 200px;
   height: 40px;
   border-radius: 8px;
   display: flex;
@@ -47,280 +34,306 @@ nav {
   gap: 4px;
   padding: 8px 0px 8px 16px;
   color: white;
+  z-index: 999999;
 }
 
-#search {
-  width: 200px;
+.navigation-menu__search {
   outline: none;
   border: none;
   background: none;
   font-size: 16px;
   color: white;
-  font-family: Poppins;
   font-weight: 400;
   line-height: 24px;
+  width: 100%;
 }
 
-#search::placeholder {
+nav {
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navigation__menu {
+  display: none;
+}
+
+input[type="text" i] {
+  padding: 0;
+}
+.navigation-menu__search::placeholder {
+  color: #f1f1f1;
+}
+
+.mobile__menu {
+  color: white;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.searchbar__menu {
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.navigation__menu_ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.navigation__menu_ul li a {
+  text-decoration: none;
   color: white;
 }
 
-.menu {
+.mobile__menu li a:hover {
+  color: red;
+}
+
+/* Navbar Styling Ends */
+
+/* Hero Styling Starts */
+video {
+  width: 100%;
+  height: auto;
+}
+
+.hero__header {
+  display: flex;
+  justify-content: center;
+}
+
+.hero__header span {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* Navbar Ends */
-
-.image-banner {
-  background-color: black;
-}
-
-#image-profile {
-  width: 100vw;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  margin: 0 auto;
-}
-
-#video-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#video-header span {
+  gap: 4px;
   background-color: #fff0bb;
   padding: 8px;
   border-radius: 0px 0px 16px 16px;
-  color: #1d1d1d;
   position: absolute;
   top: 70px;
   border: 2px solid #f3bd00;
   text-align: center;
   font-size: 16px;
   font-weight: 700;
+  line-height: 19.2px;
   font-family: "Lato";
+}
+
+.hero__header span a {
+  font-size: 14px;
+}
+
+.techpaathshala__img {
+  width: auto;
+  height: 14px;
+  margin: 0 auto;
+}
+/* Hero Styling Ends */
+
+/* Profile Styling Starts */
+.profile__img-wrapper {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__img {
+  max-height: 100%;
+  max-width: 100%;
+  filter: drop-shadow(0px -6.7px 20px rgba(0, 0, 0, 0.5));
+  object-fit: cover;
+}
+.profile {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+  position: relative;
+  bottom: 90px;
+}
+.profile__info {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 10px;
 }
 
-#techpaathshala {
-  width: 130px;
-  height: 16px;
-  margin: 0 auto;
-}
-
-#techpaathshala_link {
-  font-size: 12px;
-  font-family: Lato;
-  font-weight: 400;
-  color: rgba(9, 72, 180, 1);
-}
-
-/* Video Styling Ends */
-
-/* Profile Styling Starts */
-
-.image-container {
-  width: 100vw;
-  height: 300px;
-}
-
-#profile-img {
-  position: relative;
-  height: fit-content;
-  width: 90vw;
-  bottom: 95px;
-  left: 17px;
-}
-
-.intro {
-  text-align: center;
-  font-family: "Poppins";
-  padding: 20px 16px;
-}
-
-#profile-name {
+.profile__title {
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
 }
 
-#name {
-  font-size: 20px;
+.profile__name {
+  font-size: 16px;
   font-weight: 500;
-  margin-bottom: 10px;
   line-height: 24px;
 }
 
-#profile-description {
-  font-size: 16px;
+.profile__description {
+  font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   color: rgba(85, 85, 85, 1);
-  padding-bottom: 30px;
 }
 
-.profile-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-button {
-  padding: 10px 24px 10px 24px;
+.btn {
+  padding: 10px 24px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
-  font-family: "Poppins";
   line-height: 18px;
 }
 
-button a{
-  text-decoration: none;
-  color: white ;
-}
-
-button:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-#download-resume,
-.view-project,
-.know-more,
-#contact-btn {
+.primary-btn {
   background-color: rgba(9, 72, 180, 1);
   color: white;
 }
 
-
-#see-my-work {
+.secondary-btn {
   background-color: white;
   border: 2px solid rgba(9, 72, 180, 1);
 }
-#see-my-work a{
-  color: black;
+.primary-btn:hover,
+.secondary-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.profile-btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-/* Description CSS */
+.profile-btn a {
+  text-decoration: none;
+  font-size: 10px;
+}
 
+/* Profile Styling Ends */
+
+/* Description CSS Starts */
 .description {
-  text-align: center;
-  padding: 24px 0px;
+  margin-top: -50px;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  gap: 15px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  border-radius: 8px;
+  border-radius: 10px;
+  padding: 24px 0px;
 }
 
-.description-heading {
-  text-align: center;
-  border-bottom: 3px solid #1d1d1d;
-  padding: 10px 30px 10px 30px;
+.description__heading {
+  border-bottom: 2px solid black;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: fit-content;
+  margin: 0 auto;
   font-size: 24px;
   font-weight: 600;
-  font-family: "Poppins";
+  line-height: 36px;
 }
 
-.courses {
+.description__courses {
   display: flex;
-  justify-content: space-between;
+  text-align: center;
+  gap: 20px;
   font-size: 12px;
+  line-height: 18px;
   font-weight: 400;
-  font-family: "Poppins";
-  padding: 20px 10px 0px 10px;
 }
 
-#expertise,
-.tech-skills,
-.soft-skills,
-.projects,
-.experineces,
-.education {
-  margin: 0 auto;
-}
+/* Description Css Ends */
 
-#expertise h2,
-.tech-skills h2,
-.soft-skills h2,
-.projects h2,
-.experineces h2,
-.education h2 {
+/* Expertise CSS Starts */
+.heading {
   padding: 10px 0px 10px 0px;
   margin-bottom: 20px;
   margin-top: 20px;
   text-align: center;
   font-size: 24px;
   font-weight: 700;
-  font-family: "Poppins";
+  line-height: 36px;
 }
 
-/* Expertise CSS */
-
-.course-img {
-  width: 288px;
-  height: 258px;
-  border-radius: 4px;
-}
-
-.expertise {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.expertise__content {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 10px;
   padding: 10px 20px 10px 20px;
 }
 
-.expertise-heading {
+.expertise__img-wrapper {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.expertise__img {
+  width: 288px;
+  height: 258px;
+  border-radius: 10px;
+}
+
+.expertise__description {
+  text-align: center;
+}
+
+.expertise__heading {
   font-size: 24px;
   font-weight: 700;
-  font-family: "Poppins";
-  text-align: center;
   line-height: 36px;
 }
 
-.expertise-content {
+.expertise__context {
   font-size: 16px;
   font-weight: 400;
-  font-family: "Poppins";
-  text-align: center;
-  padding-bottom: 20px;
   line-height: 24px;
-  color: rgba(85, 85, 85, 1);
-}
-
-.expertise-content {
   color: #555555;
 }
+/* Expertise CSS Ends */
 
+/* Skills CSS Starts */
 .technologies {
   display: flex;
   overflow: scroll;
-  gap: 50px;
-  scrollbar-width: none;
+  gap: 25px;
   padding: 0px 20px 0px 20px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .technologies p {
   padding-top: 20px;
   text-align: center;
-  font-size: 16px;
+  font-size: 11.74px;
   font-weight: 600;
   font-family: "Lato";
+  line-height: 20px;
 }
-
-/* Softskills CSS */
 
 .soft-skill {
   display: flex;
@@ -328,26 +341,29 @@ button:hover {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  /* padding: 0px 16px 0px 16px; */
+  padding: 20px 0px;
 }
 
-.soft-skill p {
+.soft__skills_content p {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  font-family: "Poppins";
+  line-height: 24px;
 }
 
-.skills {
-  padding: 20px 0px 20px 0px;
+.soft__skills_content {
   text-align: center;
+  /* border: 1px solid black; */
+  width: auto;
+  height: auto;
 }
 
-/* Project CSS */
+/* Skills CSS Ends */
 
-.project {
+/* Project CSS Starts */
+.project__content {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
   justify-content: center;
@@ -357,21 +373,30 @@ button:hover {
   width: 95vw;
 }
 
-.project-heading {
+.project__heading {
   padding: 10px 0px 10px 0px;
   font-size: 24px;
   font-weight: 700;
-  font-family: "Poppins";
   line-height: 36px;
 }
 
-.project-description {
+.project__description {
   color: #555555;
   font-size: 16px;
   font-weight: 400;
-  font-family: "Poppins";
   line-height: 24px;
   padding-bottom: 20px;
+}
+
+.project__content a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.projects__container {
+  display: flex;
+  overflow: scroll;
+  padding: 0px 16px;
 }
 
 .project-scroll {
@@ -381,25 +406,23 @@ button:hover {
   padding-top: 20px;
 }
 
-#project {
-  display: flex;
-  overflow: scroll;
-  scrollbar-width: none;
-  padding: 0px 16px;
-}
-
-#back,
-#front {
+.project-scroll-btn {
   border-radius: 50%;
   border: none;
-  height: 70px;
-  width: 70px;
-  font-size: 2em;
+  height: 48px;
+  width: 48px;
+  font-size: 20px;
   background-color: #f1f1f1;
   color: #1d1d1d;
+  cursor: pointer;
 }
 
-/* Experience CSS */
+.project-scroll-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* Projet CSS Ends */
+
+/* Experience CSS Starts */
 .experience-container {
   display: flex;
   flex-direction: column;
@@ -407,7 +430,7 @@ button:hover {
   margin-bottom: 20px;
 }
 
-.experience {
+.experience__content {
   display: flex;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 24px;
@@ -415,61 +438,54 @@ button:hover {
   flex-direction: column;
 }
 
-.experience-img {
+.experience__img-wrapper {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.office-name {
+.experience__img-wrapper a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.experinece__ofice-name {
   margin-bottom: 10px;
   text-align: center;
   font-size: 24px;
   font-weight: 700;
-  font-family: "Poppins";
 }
 
-.duration,
-.work-content {
+.experinece__duration,
+.experience__work {
   margin-bottom: 10px;
   text-align: center;
   font-size: 16px;
   font-weight: 400;
-  font-family: "Poppins";
 }
 
-.work-content {
+.experience__work {
   color: #555555;
   text-align: center;
 }
 
-/* Qualification CSS */
-li {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-  gap: 3px;
-}
+/* Experience CSS Ends */
 
-#qualification {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.icons {
+/* Qualification CSS Starts */
+.circle {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: black;
 }
-.lines {
+
+.line {
   height: 83px;
   background-color: black;
-  width: 2px;
+  width: 4px;
 }
 
-#icons {
+.horizontal-line {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -478,9 +494,21 @@ li {
   margin-right: 30px;
   padding-left: 20px;
 }
-
-#icon-one {
+#circle-one {
   margin-top: 5px;
+}
+.qualification__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.qualification__container li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  gap: 3px;
 }
 
 .qualification-course {
@@ -512,7 +540,7 @@ li {
   /* width: fit-content; */
 }
 
-.qualification {
+.education {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -523,27 +551,12 @@ li {
 .education-img p {
   color: #555555;
   padding: 30px;
-  text-align: center;
   font-size: 20px;
 }
+/* Qualification CSS Ends */
 
-.footer-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  bottom: -60px;
-}
-
-#footer-img {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  border: 3px solid black;
-}
-
-.footer-content {
+/* Footer CSS Starts */
+.footer__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -554,415 +567,391 @@ li {
   padding-top: 100px;
   padding-bottom: 40px;
 }
-#copyright {
+
+.footer__img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  bottom: -60px;
+}
+
+.footer__img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 3px solid black;
+}
+
+.copyright {
   text-align: center;
   font-family: "Lato";
   font-weight: 400;
   font-size: 12px;
 }
 
-#copyright p {
+.copyright p {
   padding: 24px;
 }
 
-#phone,
-#email {
+.phone,
+.email {
   display: flex;
   gap: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
-#phone p,
-#email p {
-  margin: 0 auto;
-}
-
-#email p {
+.email p {
   font-size: 14px;
-  font-family: "Poppins";
   font-weight: 500;
 }
 
-#phone p {
+.phone p {
   font-size: 14px;
   font-weight: 400;
-  font-family: "Poppins";
 }
 
-.footer-content h2 {
+.footer__content h2 {
   font-size: 24px;
   font-family: "Poppins";
   font-weight: 500;
 }
 
-#contact-btn {
+.contact-btn a {
+  text-decoration: none;
+}
+
+.contact-btn {
   margin-bottom: 30px;
   padding: 10px, 24px, 10px, 24px;
   margin: 0 auto;
 }
+/* Footer CSS Ends */
 
-/* Mobile Design Ends */
-
-@media screen and (min-width: 340px) {
-  #email p,
-  #phone p {
+@media (min-width: 768px) {
+  /* Hero Styling Starts*/
+  .hero__header span {
+    padding: 5px 30px;
     font-size: 16px;
   }
-
-  .image-container {
-    height: 390px;
-  }
-  #profile-img {
-    left: 28px;
-  }
-
-  .courses {
-    gap: 30px;
-  }
-
-  .courses p {
+  .hero__header span a {
     font-size: 16px;
   }
+  .techpaathshala__img {
+    height: 16px;
+  }
+  /* Hero Styling ends*/
 
-  #video-header span {
-    background-color: #fff0bb;
-    padding: 8px 30px;
-  }
-}
-
-@media screen and (min-width: 397px) {
-  .image-container {
-    height: 420px;
-  }
-}
-
-@media screen and (min-width: 425px) {
-  .image-container {
-    height: 450px;
-  }
-}
-
-@media screen and (min-width: 440px) {
-  .image-container {
-    height: 500px;
-  }
-}
-
-@media screen and (min-width: 640px) {
-  #image-profile {
-    width: 70vw;
-    height: 350px;
-  }
-  .image-container {
-    height: 675px;
-  }
-
-  #profile-img {
-    left: 35px;
-    bottom: 165px;
-  }
-  .course-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 8px;
-  }
-
-  .expertise {
+  /* Profile Stlying Starts */
+  .profile {
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: initial;
+  }
+
+  .profile__img {
+    position: relative;
+    bottom: 20px;
+    width: 600px;
+    height: 400px;
+  }
+
+  .profile__info {
+    width: 700px;
+    padding-left: 26px;
+    text-align: initial;
     justify-content: initial;
     align-items: initial;
+    gap: 20px;
+    /* padding-left: 50px; */
   }
-  .expertise-heading,
-  .expertise-content {
+
+  .profile__title {
+    font-size: 32px;
+    text-align: initial;
+  }
+  .profile__name {
+    font-size: 28px;
+    font-weight: 500;
     text-align: initial;
   }
 
+  .profile__description {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .profile-btn a {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .description {
+    margin-top: 0px;
+  }
+
+  .section {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Description CSS Starts */
+
+  .description__heading {
+    font-size: 20px;
+    padding: 0px 50px;
+  }
+
+  .description__courses {
+    gap: 40px;
+    font-size: 16px;
+  }
+  /* Description CSS Ends */
+
+  /* Expertise CSS Starts */
+  .expertise__content {
+    display: flex;
+    gap: 20px;
+  }
+
+  .expertise__description {
+    text-align: initial;
+  }
+  .expertise__heading {
+    font-size: 24px;
+  }
+  .expertise__context {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  /* Expertise CSS Ends */
+
+  /* Skills CSS Starts */
   .soft-skill {
     flex-direction: row;
-    justify-content: space-around;
-    padding: 10px;
+    gap: 0px;
   }
 
-  .experience {
+  .soft__skills_content {
+    margin: 0 auto;
+  }
+  /* SKills CSS Ends */
+
+  /* Experince CSS Starts */
+  .experience-container {
     flex-direction: row;
   }
-}
+  /* Experiecne CSS Ends */
 
-@media screen and (min-width: 768px) {
-  #profile-img {
-    height: 800px;
-    left: 50px;
-  }
-
-  .image-container {
-    height: 600px;
-  }
+  /* Education CSS Starts */
   #education-img {
     width: initial;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  body {
-    overflow-x: hidden;
-  }
-  .nav-bar {
-    display: flex;
-    font-size: 24px;
-    font-family: Poppins;
-    justify-content: center;
-  }
-  .nav-bar ul {
-    display: flex;
-    flex-direction: row;
-    gap: 60px;
-  }
-
-  nav {
-    padding: 40px 120px 40px 120px;
-  }
-
-  .menu {
+@media (min-width: 1024px) {
+  /* Navbar stying starts */
+  .searchbar__menu {
     display: none;
   }
 
-  .search-box {
-    background-color: #555555;
-    width: 240px;
-    height: 52px;
-    padding: 8px 0px 8px 16px;
-    border-radius: 8px;
+  .mobile__menu {
+    display: none;
   }
 
-  #search {
-    width: 200px;
-    outline: none;
-    border: none;
-    background: none;
+  .navigation__menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navigation__menu_ul {
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+  }
+  header {
+    padding: 40px 30px 40px 30px;
+  }
+
+  .nav-bar {
+    flex-direction: row-reverse;
+  }
+
+  .navigation__menu_ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    transition: color 0.3s;
+  }
+
+  .navigation__menu li a:hover {
+    color: red;
+  }
+
+  .navigation-menu__search {
     font-size: 24px;
   }
+  /* Navbar stying ends */
 
-  #image-profile {
-    width: 100vw;
-    height: 600px;
+  /* Hero stying starts */
+  .techpaathshala__img {
+    height: 24px;
+  }
+  .hero__header span {
+    top: 150px;
+    font-size: 24px;
+    padding: 5px 50px 5px 50px;
   }
 
-  #video-header span {
-    top: 135px;
-    padding: 16px 100px 8px 100px;
-    font-size: 28px;
-    /* width: 800px; */
+  .hero__header span a {
+    font-size: 16px;
   }
 
-  #video-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  /* Hero stying Ends */
 
-  #techpaathshala {
-    width: 200px;
-    height: 28px;
-    margin: none;
+  /* Profile Styling Starts */
+  .profile__img {
+    width: 800px;
+    height: 540px;
     position: relative;
-    top: 5px;
+    bottom: 80px;
   }
 
-  #techpaathshala_link {
-    font-size: 20px;
-    line-height: 19.2px;
+  .profile__info {
+    width: 1000px;
   }
 
-  .image-container {
-    float: right;
-    width: 50vw;
-  }
-
-  #profile-img {
-    width: 40vw;
-    bottom: 50px;
-    right: 50px;
-    top: -195px;
-    /* margin-right: 40px; */
-  }
-
-  .intro {
-    width: 50vw;
-    text-align: initial;
-    margin-top: 80px;
-  }
-
-  #profile-name {
-    font-size: 48px;
-    font-weight: 700px;
-    line-height: 72px;
-  }
-
-  #name {
+  .profile__title {
     font-size: 40px;
-    font-weight: 500;
-    line-height: 60px;
+    line-height: 30px;
   }
 
-  #profile-description {
+  .profile__name {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .profile__description {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .profile-btn a {
+    font-size: 16px;
+  }
+  /* Profile Styling Ends */
+
+  /* Description CSS Starts */
+  .description__heading {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 60px;
+    padding: 0px 100px;
+  }
+
+  .description {
+    margin-top: -50px;
+  }
+
+  .description__courses {
     font-size: 24px;
     font-weight: 400;
     line-height: 36px;
-    color: rgba(85, 85, 85, 1);
+    gap: 60px;
   }
-  section {
-    width: 90vw;
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    flex-direction: row-reverse;
-    margin: 0 auto;
-  }
+  /* Description CSS Ends */
 
-  .profile-btn {
-    display: flex;
-    gap: 30px;
-    justify-content: initial;
-    align-items: initial;
-  }
+  /* Expertise CSS Starts */
 
-  button {
-    font-size: 16px;
-    padding: 10px 24px 10px 24px;
-  }
-
-  .description,
-  .expertise,
-  .technologies,
-  .soft-skill,
-  #project,
-  .experience-container,
-  .qualification {
-    margin: 0 auto;
-    width: 90vw;
-  }
-
-  .description-heading {
-    font-size: 40px;
-    padding-left: 200px;
-    padding-right: 200px;
-  }
-
-  .courses p {
-    font-size: 24px;
-    font-weight: 400;
-  }
-
-  .courses {
-    gap: 150px;
-  }
-
-  #expertise h2,
-  .tech-skills h2,
-  .soft-skills h2,
-  .projects h2,
-  .experineces h2,
-  .education h2 {
-    text-align: inherit;
-    font-size: 48px;
-    width: 90vw;
-    margin: 30px auto;
-  }
-
-  .course-img {
+  .expertise__img {
     width: 265px;
     height: 258px;
   }
 
-  .expertise-description {
-    width: 700px;
-  }
-
-  .expertise-heading {
-    text-align: initial;
+  .expertise__heading {
     font-size: 40px;
     line-height: 60px;
   }
 
-  .expertise-content {
+  .expertise__context {
     font-size: 24px;
+    font-weight: 400;
     line-height: 36px;
   }
 
+  .heading {
+    text-align: initial;
+    margin: 60px auto;
+    font-size: 48px;
+  }
+
+  /* Expertise CSS Ends */
+
+  /* Skills CSS Starts */
+
   .technologies {
-    overflow: scroll;
-    display: flex;
-    gap: 50px;
+    gap: 70px;
   }
 
   .technologies p {
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 35px;
   }
 
   .soft-skill {
     flex-direction: row;
-    gap: 20px;
-    padding: 10px 40px;
+    gap: 30px;
+    padding: 20px 20px;
   }
 
-  .skills p {
+  .soft__skills_content p {
     font-size: 32px;
+    line-height: 48px;
   }
-  
-  #project{
-    display: flex;
+
+  /* Skills CSS Ends */
+
+  /* Project CSS Starts */
+  .projects__container {
     gap: 30px;
     padding: 10px;
   }
 
-
-  .project-heading {
+  .project__heading {
     font-size: 24px;
   }
 
-  .project-description {
+  .profile__description {
     font-size: 16px;
     font-weight: 400;
   }
+  /* Proejct CSS Ends */
 
-  .experience-container{
-    display: flex;
+  /* Experiecne CSS Starts */
+  .experience-container {
     flex-direction: row;
   }
 
+  /* Experience CSS Ends */
 
-  .work-content, .office-name, .duration{
-    text-align: initial;
-  }
-
-
-  .qualification{
-    display: flex;
+  /* Qualification CSS Starts */
+  .education {
     flex-direction: row;
+    justify-content: space-around;
+    gap: 100px;
   }
 
-
-  .qualification-course {
-    font-size: 26px;
-  }
-
-  .qualification-college {
-    font-size: 24px;
-    font-weight: 500;
-  }
-
-  #icon-one {
+  #circle-one {
     margin-top: 20px;
   }
 
-  .lines {
-    height: 123px;
-  }
-
-  .qualification {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 100px;;
+  .line {
+    height: 115px;
   }
 
   .qualification-course {
@@ -973,6 +962,7 @@ li {
     width: 590px;
     height: 350px;
   }
+
   .education-img p {
     font-size: 24px;
     font-family: "Poppins";
@@ -989,15 +979,99 @@ li {
     align-items: normal;
   }
 
-  .icons {
+  .circle {
     width: 25px;
     height: 25px;
   }
+  /* Qualificaiton CSS Ends */
+}
 
-  #qualification {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+@media (min-width: 1280px) {
+  /* Navbar Styling Starts */
+  header {
+    padding: 40px 120px 40px 120px;
+  }
+  /* Navbar Styling Ends */
+
+  /* Hero stying starts */
+  video {
+    height: 600px;
+    max-width: 100%;
+    background-color: black;
   }
 
+  .navigation__menu li a {
+    font-size: 24px;
+  }
+
+  .hero__header span {
+    top: 150px;
+    padding: 8px 97px;
+  }
+  /* Hero stying starts */
+
+  /* Profile Styling Starting */
+
+  .profile__img {
+    width: 1000px;
+    height: 800px;
+    position: relative;
+    bottom: 150px;
+  }
+
+  .profile__info {
+    width: 1200px;
+  }
+
+  .profile__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 72px;
+  }
+  .profile__name {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .profile__description {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .btn {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  /* Profile styling Ends */
+
+  /* Description CSS Starts */
+  .description {
+    margin-top: -80px;
+  }
+
+  .description__heading {
+    padding: 0px 180px;
+  }
+  .description__courses {
+    gap: 120px;
+  }
+  /* Description CSS Ends */
+
+  /* Expertise CSS Starts */
+  .expertise__description {
+    width: 700px;
+  }
+  /* Expertise CSS Ends */
+
+  /* Experience CSS Starts */
+  .experience__content {
+    flex-direction: row;
+  }
+  .experinece__ofice-name,
+  .experinece__duration,
+  .experience__work {
+    text-align: initial;
+  }
+
+  /* Experience CSS Ends */
 }
